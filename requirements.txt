@@ -1,2 +1,2 @@
-streanmlit
+streamlit
 pillow
