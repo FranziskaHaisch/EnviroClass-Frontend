@@ -54,7 +54,7 @@ If a **Wildfire** is predicted, determine in which **Area** it has been detected
 ### **HOW DOES IT WORK? 🛰️**
 
 
-1️⃣ **Upload a satellite image** (JPG or PNG)
+1️⃣ **Upload or select a satellite image** (JPG or PNG)
 
 2️⃣ **Click 'Analyze Image'** to start the detection
 
@@ -66,17 +66,16 @@ If a **Wildfire** is predicted, determine in which **Area** it has been detected
 # image selection
 st.markdown("### 📸 Choose an Image for Analysis")
 option = st.radio("Select an option:", ("Upload your own image", "Choose a sample image"))
-uploaded_file = st.file_uploader("Choose an image file...", type=["jpg", "png", "jpeg"])
 
 image = None
 if option == "Upload your own image":
-    uploaded_file = st.file_uploader("Choose an image file...", type=["jpg", "png", "jpeg"])
-    if uploaded_file:
-        image = Image.open(uploaded_file)
+    uploaded_image = st.file_uploader("Choose an image file...", type=["jpg", "png", "jpeg"])
+    if uploaded_image:
+        image = Image.open(uploaded_image)
 
 elif option == "Choose a sample image":
-    sample_images = [f"media/image{i}.jpg" for i in range(1, 11)]
-    selected_image = st.selectbox("Select a sample image:", sample_images)
+    sample_image = [f"media/image{i}.jpg" for i in range(1, 11)]
+    selected_image = st.selectbox("Select a sample image:", sample_image)
     if selected_image:
         image = Image.open(selected_image)
 
