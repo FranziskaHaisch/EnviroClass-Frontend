@@ -41,7 +41,7 @@ If a **Wildfire** is predicted, determine in which **Area** it has been detected
 - `Forest`
 - `Grassland`
 - `Highway`
-- `Lake`
+- `Lake or Sea`
 - `Mountain`
 - `Parking`
 - `Port`
@@ -74,7 +74,7 @@ if option == "Upload your own image":
         image = Image.open(uploaded_image)
 
 elif option == "Choose a sample image":
-    sample_image = [f"media/image{i}.jpg" for i in range(1, 11)]
+    sample_image = [f"media/image{i}.jpg" for i in range(1, 21)]
     selected_image = st.selectbox("Select a sample image:", sample_image)
     if selected_image:
         image = Image.open(selected_image)
