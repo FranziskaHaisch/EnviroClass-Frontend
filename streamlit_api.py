@@ -7,7 +7,7 @@ import os
 
 # FastAPI Endpoints
 PORT = os.getenv("PORT", "8000")
-API_URL = "https://enviroclass-605755972351.europe-west1.run.app"
+API_URL = "https://enviroclass-dev-605755972351.europe-west1.run.app"
 WILDFIRE_API_URL = f"{API_URL}/predict-wildfire"
 ENVIRONMENT_API_URL = f"{API_URL}/predict-environment"
 
